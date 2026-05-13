@@ -276,7 +276,7 @@ a{text-decoration:none;color:inherit}
   <div class="hero-pattern"></div>
   <div class="hero-content">
     <div class="hero-left">
-      <div class="badge-pill">Sydney-Wide &nbsp;·&nbsp; <span id="badge-years">7</span>+ Years &nbsp;·&nbsp; Est. 2019</div>
+      <div class="badge-pill">Sydney-Wide &nbsp;·&nbsp; Est. 2019</div>
       <h1 class="hero-title">Professional Gutter Cleaning &amp; Property Maintenance in <span class="gold">Sydney</span></h1>
       <p class="hero-sub">Gutters, pressure cleaning, roof repairs and waterproofing — done right, every time. Trusted by homeowners, strata and businesses across Sydney.</p>
       <div class="hero-stats">
@@ -618,7 +618,6 @@ a{text-decoration:none;color:inherit}
 // Years counter
 (function(){
   const years = new Date().getFullYear() - 2019;
-  document.getElementById('badge-years').textContent = years;
   const el = document.getElementById('years-counter');
   let c = 0;
   const t = setInterval(()=>{ el.textContent = ++c; if(c >= years) clearInterval(t); }, 80);
