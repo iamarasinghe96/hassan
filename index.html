@@ -70,7 +70,6 @@ a{text-decoration:none;color:inherit}
 .hero-logo-wrap::before{content:'';position:absolute;inset:-20px;border-radius:50%;border:2px solid rgba(200,146,42,0.2);animation:spin 20s linear infinite}
 .hero-logo-wrap::after{content:'';position:absolute;inset:-40px;border-radius:50%;border:1px solid rgba(200,146,42,0.1);animation:spin 30s linear infinite reverse}
 .hero-logo-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--gold);box-shadow:0 0 60px rgba(200,146,42,0.25),0 0 120px rgba(200,146,42,0.1)}
-.hero-tagline{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--gold);color:var(--navy-dark);font-size:11px;font-weight:700;letter-spacing:0.12em;padding:6px 20px;border-radius:50px}
 .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.4);font-size:11px;letter-spacing:0.1em;animation:fadeUp 1s 0.8s ease both;z-index:2}
 .scroll-dot{width:6px;height:6px;border-radius:50%;background:var(--gold-light);opacity:0.6;animation:bounce 2s ease-in-out infinite}
 
@@ -178,17 +177,6 @@ a{text-decoration:none;color:inherit}
 .areas-note{font-size:14px;color:rgba(255,255,255,0.5)}
 .areas-note a{color:var(--gold-light);text-decoration:underline}
 
-/* REVIEWS */
-.testimonials-section{background:var(--off-white)}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:36px}
-.review-card{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid rgba(26,46,74,0.07);box-shadow:var(--shadow);transition:all 0.3s}
-.review-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.review-stars{color:var(--gold);font-size:18px;margin-bottom:14px;letter-spacing:2px}
-.review-card p{font-size:15px;color:var(--navy-mid);line-height:1.7;margin-bottom:16px;font-style:italic}
-.reviewer{font-size:12px;color:var(--text-muted);font-weight:600}
-.google-link-wrap{text-align:center}
-.google-link-wrap .btn-outline{color:var(--navy);border-color:rgba(26,46,74,0.2)}
-.google-link-wrap .btn-outline:hover{color:var(--gold);border-color:var(--gold)}
 
 /* SOCIAL */
 .social-section{background:var(--white)}
@@ -240,6 +228,7 @@ a{text-decoration:none;color:inherit}
   .hero-content{grid-template-columns:1fr;gap:36px;text-align:center;padding:48px 24px 80px}
   .hero-right{order:-1}
   .hero-logo-wrap{width:220px;height:220px}
+  .badge-pill{margin-top:56px}
   .hero-ctas{justify-content:center}
   .hero-scroll{display:none}
   .quote-grid{grid-template-columns:1fr}
@@ -276,7 +265,6 @@ a{text-decoration:none;color:inherit}
     <ul class="nav-links" id="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#areas">Areas</a></li>
-      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#quote" class="nav-cta">Free Quote</a></li>
     </ul>
   </div>
@@ -306,7 +294,6 @@ a{text-decoration:none;color:inherit}
     <div class="hero-right">
       <div class="hero-logo-wrap">
         <img src="logo.jpg" alt="Lion Gutter Cleaning" class="hero-logo-img">
-        <div class="hero-tagline">CLEAN · SAFE · RELIABLE</div>
       </div>
     </div>
   </div>
@@ -552,22 +539,6 @@ a{text-decoration:none;color:inherit}
       <div class="area-pill">Western Sydney</div><div class="area-pill">+ All Sydney Suburbs</div>
     </div>
     <p class="areas-note">Not sure if we cover your suburb? <a href="tel:0423540616">Call Hassan</a> — if we can get there, we will.</p>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="section testimonials-section" id="reviews">
-  <div class="container">
-    <div class="section-label">Reviews</div>
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="reviews-grid">
-      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Great service, arrived on time and left the place spotless. Would definitely recommend Lion Gutter Cleaning to anyone in Sydney."</p><div class="reviewer">— Google Review</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Hassan was professional, honest about what needed doing, and the price was fair. Gutters are completely clear now. Very happy."</p><div class="reviewer">— Google Review</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Called in the morning, job done by afternoon. Fast, clean, no mess left behind. Will definitely be using Lion again."</p><div class="reviewer">— Google Review</div></div>
-    </div>
-    <div class="google-link-wrap">
-      <a href="https://www.google.com/maps/place/Lion+Gutter+Cleaning/@-33.869613,151.0330909,17.51z" target="_blank" rel="noopener" class="btn btn-outline">See all reviews on Google <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-    </div>
   </div>
 </section>
 
