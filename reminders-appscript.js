@@ -17,8 +17,71 @@
  */
 
 const SHEET_NAME = 'Clients';
+const LEADS_SHEET_NAME = 'Leads';
 const HASSAN_EMAIL = 'iamarasinghe96@gmail.com';
 const DAYS_BEFORE_DUE = 7; // send reminder this many days before due date
+
+/**
+ * Receives form submissions from the website and logs them to the Leads sheet.
+ * Deploy this script as a Web App (Execute as: Me, Who has access: Anyone).
+ *
+ * LEADS SHEET COLUMNS:
+ * A  Submitted At
+ * B  Name
+ * C  Phone
+ * D  Email
+ * E  Address
+ * F  Services
+ * G  Storeys
+ * H  Notes
+ * I  Status  (New / Contacted / Booked / No Answer)
+ */
+function doPost(e) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(LEADS_SHEET_NAME);
+
+  // Create Leads sheet with headers if it doesn't exist
+  if (!sheet) {
+    sheet = ss.insertSheet(LEADS_SHEET_NAME);
+    sheet.appendRow(['Submitted At', 'Name', 'Phone', 'Email', 'Address', 'Services', 'Storeys', 'Notes', 'Status']);
+    sheet.getRange(1, 1, 1, 9).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
+
+  const p = e.parameter;
+  sheet.appendRow([
+    new Date(),
+    p.name    || '',
+    p.phone   || '',
+    p.email   || '',
+    p.address || '',
+    p.services || '',
+    p.storeys  || '',
+    p.notes    || '',
+    'New'
+  ]);
+
+  // Also notify Hassan by email
+  MailApp.sendEmail({
+    to: HASSAN_EMAIL,
+    subject: '🦁 New quote request — ' + (p.name || 'Unknown'),
+    htmlBody:
+      '<h2 style="color:#1a2e4a;font-family:sans-serif;">New Quote Request</h2>' +
+      '<div style="font-family:sans-serif;border:1px solid #e0e0e0;border-radius:10px;padding:16px 20px;">' +
+      '<p><b>Name:</b> ' + (p.name || '—') + '</p>' +
+      '<p><b>Phone:</b> ' + (p.phone || '—') + '</p>' +
+      '<p><b>Email:</b> ' + (p.email || '—') + '</p>' +
+      '<p><b>Address:</b> ' + (p.address || '—') + '</p>' +
+      '<p><b>Services:</b> ' + (p.services || '—') + '</p>' +
+      '<p><b>Storeys:</b> ' + (p.storeys || '—') + '</p>' +
+      '<p><b>Notes:</b> ' + (p.notes || '—') + '</p>' +
+      '<div style="margin-top:16px;">' +
+      '<a href="https://wa.me/61' + (p.phone || '').replace(/\D/g,'').replace(/^0/,'') + '" style="background:#25D366;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">WhatsApp ' + (p.name ? p.name.split(' ')[0] : '') + '</a>' +
+      '</div></div>'
+  });
+
+  return ContentService.createTextOutput('ok').setMimeType(ContentService.MimeType.TEXT);
+}
 
 /**
  * Run this once to install the daily trigger.

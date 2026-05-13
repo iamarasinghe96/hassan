@@ -615,6 +615,20 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxcJ5s03k9i4aJdAvOFOrbA6nfeEAF1bCFlADbUJrWwjiGLSvquNH26fxpsZ0BG-pB4/exec';
+
+function submitToSheet(d) {
+  const payload = new FormData();
+  payload.append('name', d.name);
+  payload.append('phone', d.phone);
+  payload.append('email', d.email || '');
+  payload.append('address', d.address);
+  payload.append('services', d.services || '');
+  payload.append('storeys', d.storeys || '');
+  payload.append('notes', d.message || '');
+  fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: payload });
+}
+
 // Years counter
 (function(){
   const years = new Date().getFullYear() - 2019;
@@ -677,6 +691,7 @@ document.getElementById('sendWhatsapp').addEventListener('click', function(){
   }
   document.getElementById('formErr').style.display = 'none';
   const d = getFormData();
+  submitToSheet(d);
   const lines = [
     "Hi Hassan! I'd like a free quote from Lion Gutter Cleaning.",
     "",
@@ -701,6 +716,7 @@ document.getElementById('sendEmail').addEventListener('click', function(){
   }
   document.getElementById('formErr').style.display = 'none';
   const d = getFormData();
+  submitToSheet(d);
   const subject = 'Free Quote Request – ' + d.name;
   const body = [
     'Hi Hassan,',
