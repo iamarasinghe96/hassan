@@ -125,7 +125,7 @@ function fillNextReminderDate(sheet, row) {
   if (!jobDateVal) return;
 
   const jobDate = new Date(jobDateVal);
-  const months = intervalVal ? parseInt(intervalVal) : 12;
+  const months = intervalVal ? parseInt(intervalVal) : 6;
 
   const nextDate = new Date(jobDate);
   nextDate.setMonth(nextDate.getMonth() + months);
