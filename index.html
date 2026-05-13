@@ -193,9 +193,9 @@ a{text-decoration:none;color:inherit}
 /* REVIEWS */
 .reviews-section{background:var(--off-white)}
 .reviews-carousel-wrap{position:relative}
-.reviews-carousel{overflow:hidden;border-radius:var(--radius)}
+.reviews-carousel{overflow:hidden;border-radius:var(--radius);width:100%}
 .review-cards-track{display:flex;transition:transform 0.5s ease;will-change:transform}
-.review-card{min-width:100%;background:var(--white);border-radius:var(--radius);padding:36px 40px;border:1px solid rgba(26,46,74,0.08);box-shadow:var(--shadow);box-sizing:border-box;flex-shrink:0}
+.review-card{flex:0 0 100%;width:100%;background:var(--white);border-radius:var(--radius);padding:36px 40px;border:1px solid rgba(26,46,74,0.08);box-shadow:var(--shadow);box-sizing:border-box;flex-shrink:0}
 .review-stars{color:var(--gold);font-size:22px;margin-bottom:16px;letter-spacing:3px}
 .review-text{font-size:16px;color:var(--navy);line-height:1.75;margin-bottom:22px;font-style:italic}
 .review-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
@@ -204,10 +204,7 @@ a{text-decoration:none;color:inherit}
 .review-name{font-weight:700;font-size:15px;color:var(--navy)}
 .review-meta{font-size:13px;color:var(--text-muted);margin-top:2px}
 .review-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,146,42,0.1);border:1px solid rgba(200,146,42,0.25);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:0.06em;padding:5px 12px;border-radius:50px}
-.reviews-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px}
-.review-nav-btn{width:44px;height:44px;border-radius:50%;background:var(--white);border:1.5px solid rgba(26,46,74,0.15);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;font-size:20px;line-height:1}
-.review-nav-btn:hover{background:var(--gold);border-color:var(--gold);color:white}
-.review-dots-wrap{display:flex;gap:8px;align-items:center}
+.reviews-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
 .review-dot{width:8px;height:8px;border-radius:50%;background:rgba(26,46,74,0.2);border:none;cursor:pointer;padding:0;transition:all 0.25s}
 .review-dot.active{background:var(--gold);width:24px;border-radius:4px}
 .reviews-cta{text-align:center;margin-top:40px}
@@ -708,13 +705,25 @@ a{text-decoration:none;color:inherit}
             </div>
           </div>
 
+          <!-- Review 6 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Hassan inspected the roof before quoting and provided photos. He did a good job cleaning the gutters. He also provided photos of the cleaned gutters. He cleaned up upon completion. I would not hesitate to recommend him."</p>
+            <div class="review-footer">
+              <div class="review-author">
+                <div class="review-avatar">R</div>
+                <div>
+                  <div class="review-name">Ray</div>
+                  <div class="review-meta">Epping, NSW · Gutter Cleaning · 18 May 2022</div>
+                </div>
+              </div>
+              <div class="review-badge">Oneflare Verified</div>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="reviews-nav">
-        <button class="review-nav-btn" id="reviewPrev">&#8592;</button>
-        <div class="review-dots-wrap" id="reviewDots"></div>
-        <button class="review-nav-btn" id="reviewNext">&#8594;</button>
-      </div>
+      <div class="reviews-dots" id="reviewDots"></div>
     </div>
     <div class="reviews-cta">
       <!-- TODO: Replace # with actual Google Review URL when available -->
@@ -988,6 +997,7 @@ document.getElementById('sendEmail').addEventListener('click', function() {
 /* ── Work photos slideshow ── */
 (function() {
   var track = document.getElementById('workSlides');
+  var wrap = document.getElementById('workSlideshowWrap');
   var dotsEl = document.getElementById('workDots');
   var prevBtn = document.getElementById('workPrev');
   var nextBtn = document.getElementById('workNext');
@@ -998,7 +1008,6 @@ document.getElementById('sendEmail').addEventListener('click', function() {
   var current = 0;
   var timer;
 
-  // Build dots
   slides.forEach(function(_, i) {
     var dot = document.createElement('button');
     dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
@@ -1009,7 +1018,7 @@ document.getElementById('sendEmail').addEventListener('click', function() {
 
   function goTo(n) {
     current = (n + total) % total;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    track.style.transform = 'translateX(-' + (current * wrap.offsetWidth) + 'px)';
     dotsEl.querySelectorAll('.slide-dot').forEach(function(d, i) {
       d.classList.toggle('active', i === current);
     });
@@ -1022,19 +1031,18 @@ document.getElementById('sendEmail').addEventListener('click', function() {
 
   prevBtn.addEventListener('click', function() { goTo(current - 1); resetTimer(); });
   nextBtn.addEventListener('click', function() { goTo(current + 1); resetTimer(); });
-
-  // Pause on hover
-  document.getElementById('workSlideshowWrap').addEventListener('mouseenter', function() { clearTimeout(timer); });
-  document.getElementById('workSlideshowWrap').addEventListener('mouseleave', function() { resetTimer(); });
-
+  wrap.addEventListener('mouseenter', function() { clearTimeout(timer); });
+  wrap.addEventListener('mouseleave', function() { resetTimer(); });
+  window.addEventListener('resize', function() { goTo(current); });
   resetTimer();
 })();
 
-/* ── Reviews carousel ── */
+/* ── Reviews carousel — auto-rotation only, no prev/next buttons ── */
 (function() {
   var track = document.getElementById('reviewsTrack');
-  var dotsWrap = document.getElementById('reviewDots');
-  if (!track) return;
+  var clip = track ? track.parentElement : null;
+  var dotsEl = document.getElementById('reviewDots');
+  if (!track || !clip || !dotsEl) return;
 
   var cards = Array.from(track.children);
   var total = cards.length;
@@ -1046,24 +1054,23 @@ document.getElementById('sendEmail').addEventListener('click', function() {
     dot.className = 'review-dot' + (i === 0 ? ' active' : '');
     dot.setAttribute('aria-label', 'Go to review ' + (i + 1));
     dot.addEventListener('click', function() { goTo(i); resetTimer(); });
-    dotsWrap.appendChild(dot);
+    dotsEl.appendChild(dot);
   });
 
   function goTo(n) {
     current = (n + total) % total;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    dotsWrap.querySelectorAll('.review-dot').forEach(function(d, i) {
+    track.style.transform = 'translateX(-' + (current * clip.offsetWidth) + 'px)';
+    dotsEl.querySelectorAll('.review-dot').forEach(function(d, i) {
       d.classList.toggle('active', i === current);
     });
   }
 
   function resetTimer() {
     clearTimeout(timer);
-    timer = setTimeout(function() { goTo(current + 1); resetTimer(); }, 6000);
+    timer = setTimeout(function() { goTo(current + 1); resetTimer(); }, 5500);
   }
 
-  document.getElementById('reviewPrev').addEventListener('click', function() { goTo(current - 1); resetTimer(); });
-  document.getElementById('reviewNext').addEventListener('click', function() { goTo(current + 1); resetTimer(); });
+  window.addEventListener('resize', function() { goTo(current); });
   resetTimer();
 })();
 </script>
