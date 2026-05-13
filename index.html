@@ -637,6 +637,18 @@ function submitToSheet(d) {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Hide sticky bar while keyboard is open (any input/select/textarea focused)
+const stickyCta = document.getElementById('stickyCta');
+document.querySelectorAll('input, select, textarea').forEach(function(el) {
+  el.addEventListener('focus', function() {
+    stickyCta.style.display = 'none';
+  });
+  el.addEventListener('blur', function() {
+    // Small delay so it doesn't flash back before keyboard fully closes
+    setTimeout(function() { stickyCta.style.display = 'flex'; }, 300);
+  });
+});
+
 // Hamburger
 document.getElementById('hamburger').addEventListener('click', function(){
   document.getElementById('nav-links').classList.toggle('open');
