@@ -17,7 +17,7 @@
  */
 
 const SHEET_NAME = 'Clients';
-const HASSAN_EMAIL = 'hassan@lionguttercleaning.com.au';
+const HASSAN_EMAIL = 'iamarasinghe96@gmail.com';
 const DAYS_BEFORE_DUE = 7; // send reminder this many days before due date
 
 /**
