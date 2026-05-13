@@ -105,29 +105,6 @@ a{text-decoration:none;color:inherit}
 .service-card--highlight .service-icon{background:rgba(200,146,42,0.2)}
 .card-badge{display:inline-block;margin-top:14px;background:rgba(200,146,42,0.2);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:0.08em;padding:4px 12px;border-radius:50px}
 
-/* PHOTO GUIDE */
-.photo-guide-section{background:var(--white)}
-.photo-guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
-.photo-step{background:var(--off-white);border-radius:var(--radius);padding:28px;border:1px solid rgba(26,46,74,0.07);position:relative}
-.photo-step-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px}
-.photo-step-icon{width:56px;height:56px;margin-bottom:14px}
-.photo-step-icon svg{width:56px;height:56px;stroke:var(--navy-mid)}
-.photo-step h4{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:10px}
-.photo-step p{font-size:14px;color:var(--text-muted);line-height:1.65;margin-bottom:12px}
-.photo-tip{font-size:12px;color:var(--navy-mid);font-weight:500;background:rgba(26,46,74,0.07);border-radius:8px;padding:8px 12px}
-.photo-step--cta{background:var(--navy)}
-.photo-step--cta .photo-step-num{color:var(--gold-light);opacity:0.5}
-.photo-step--cta h4{color:var(--white)}
-.photo-step--cta p{color:rgba(255,255,255,0.65);margin-bottom:20px}
-.send-options{display:flex;flex-direction:column;gap:10px}
-.send-btn{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;transition:all 0.2s;cursor:pointer;font-family:'DM Sans',sans-serif}
-.send-btn--wa{background:#25D366;color:white}
-.send-btn--wa:hover{background:#1ebe5a;transform:translateX(3px)}
-.send-btn--fb{background:#0866FF;color:white}
-.send-btn--fb:hover{background:#0554d4;transform:translateX(3px)}
-.send-btn--email{background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.2)}
-.send-btn--email:hover{background:rgba(255,255,255,0.2);transform:translateX(3px)}
-
 /* QUOTE */
 .quote-section{background:var(--off-white)}
 .quote-grid{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:start}
@@ -138,26 +115,37 @@ a{text-decoration:none;color:inherit}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid rgba(26,46,74,0.15);border-radius:var(--radius-sm);font-size:14px;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);transition:border-color 0.2s;outline:none;appearance:none;-webkit-appearance:none}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,146,42,0.1)}
 .form-group textarea{resize:vertical;min-height:90px}
-.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.checkbox-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--radius-sm);border:1.5px solid rgba(26,46,74,0.12);cursor:pointer;transition:all 0.2s;font-size:13px;background:var(--off-white)}
+.form-error{font-size:12px;color:#e53e3e;margin-top:6px;display:none}
+
+/* CUSTOM CHECKBOXES */
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.checkbox-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:var(--radius-sm);border:1.5px solid rgba(26,46,74,0.12);cursor:pointer;transition:all 0.2s;font-size:14px;font-weight:500;color:var(--navy);background:var(--off-white);user-select:none}
 .checkbox-item:hover{border-color:var(--gold);background:var(--gold-pale)}
-.checkbox-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--gold);flex-shrink:0}
-.file-upload-area{border:2px dashed rgba(26,46,74,0.2);border-radius:var(--radius-sm);padding:28px;text-align:center;cursor:pointer;transition:all 0.2s;color:var(--text-muted);font-size:14px}
-.file-upload-area:hover{border-color:var(--gold);background:var(--gold-pale)}
-.file-upload-area svg{margin:0 auto 12px;color:var(--text-muted)}
-.upload-link{color:var(--gold);font-weight:600;cursor:pointer}
-.upload-hint{font-size:12px;color:var(--text-muted);margin-top:4px}
-.file-list{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-.file-tag{display:flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(200,146,42,0.3);color:var(--navy);font-size:12px;font-weight:500;padding:4px 10px;border-radius:50px}
-.form-or{text-align:center;color:var(--text-muted);font-size:13px;margin:16px 0;position:relative}
-.form-or::before,.form-or::after{content:'';position:absolute;top:50%;width:38%;height:1px;background:rgba(26,46,74,0.1)}
-.form-or::before{left:0}.form-or::after{right:0}
-.quick-send-row{display:flex;gap:10px;margin-bottom:20px}
-.quick-send-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;transition:all 0.2s;font-family:'DM Sans',sans-serif}
-.quick-wa{background:#25D366;color:white}
-.quick-wa:hover{background:#1ebe5a}
-.quick-fb{background:#0866FF;color:white}
-.quick-fb:hover{background:#0554d4}
+.checkbox-item input[type=checkbox]{display:none}
+.checkbox-box{width:20px;min-width:20px;height:20px;border-radius:5px;border:2px solid rgba(26,46,74,0.2);background:var(--white);display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}
+.checkbox-box svg{display:none;width:12px;height:12px;stroke:white;stroke-width:3}
+.checkbox-item.checked .checkbox-box{background:var(--gold);border-color:var(--gold)}
+.checkbox-item.checked .checkbox-box svg{display:block}
+.checkbox-item.checked{background:var(--gold-pale);border-color:var(--gold)}
+
+/* PHOTO TIP BOX */
+.photo-tip-box{background:var(--navy);border-radius:var(--radius-sm);padding:20px 22px;margin-bottom:20px}
+.photo-tip-title{color:var(--gold-light);font-size:13px;font-weight:600;letter-spacing:0.04em;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.photo-tip-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.tip-step{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.tip-step svg{width:36px;height:36px;stroke:rgba(255,255,255,0.7);flex-shrink:0}
+.tip-step span{font-size:11px;color:rgba(255,255,255,0.6);line-height:1.3}
+.photo-tip-note{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
+
+/* SEND CHOICE BUTTONS */
+.send-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.send-choice-btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 20px;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;transition:all 0.2s;border:none;font-family:'DM Sans',sans-serif;line-height:1.2;text-align:center}
+.send-choice-btn svg{flex-shrink:0}
+.send-btn-wa{background:#25D366;color:white}
+.send-btn-wa:hover{background:#1ebe5a;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,0.35)}
+.send-btn-email{background:var(--navy);color:white}
+.send-btn-email:hover{background:var(--navy-mid);transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,46,74,0.3)}
+
 .form-success{text-align:center;padding:60px 20px}
 .success-icon{width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--navy-dark);font-size:28px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
 .form-success h3{font-size:22px;color:var(--navy);margin-bottom:10px}
@@ -210,18 +198,6 @@ a{text-decoration:none;color:inherit}
 .social-card>span:first-of-type{font-weight:600;font-size:15px}
 .social-sub{font-size:12px;color:var(--text-muted)}
 
-/* REMINDER WORKFLOW */
-.workflow-section{background:var(--navy-dark);padding:72px 0}
-.workflow-inner{max-width:900px;margin:0 auto;padding:0 24px;text-align:center}
-.workflow-inner .section-label{color:var(--gold-light)}
-.workflow-inner .section-title{color:var(--white);margin-bottom:12px}
-.workflow-inner .section-sub{color:rgba(255,255,255,0.6);margin:0 auto 40px;max-width:600px}
-.workflow-steps{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-.wf-step{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:24px;flex:1;min-width:190px;max-width:220px;text-align:center}
-.wf-num{width:36px;height:36px;border-radius:50%;background:var(--gold);color:var(--navy-dark);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-.wf-step h4{color:var(--white);font-size:15px;font-weight:600;margin-bottom:8px}
-.wf-step p{color:rgba(255,255,255,0.55);font-size:13px;line-height:1.6}
-
 /* FOOTER */
 .footer{background:var(--navy-dark);padding:64px 0 0}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
@@ -261,10 +237,11 @@ a{text-decoration:none;color:inherit}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:12px 16px;border-radius:10px}
   .hamburger{display:flex}
-  .hero-content{grid-template-columns:1fr;gap:36px;text-align:center;padding:48px 24px}
+  .hero-content{grid-template-columns:1fr;gap:36px;text-align:center;padding:48px 24px 80px}
   .hero-right{order:-1}
   .hero-logo-wrap{width:220px;height:220px}
   .hero-ctas{justify-content:center}
+  .hero-scroll{display:none}
   .quote-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .checkbox-grid{grid-template-columns:1fr}
@@ -272,16 +249,15 @@ a{text-decoration:none;color:inherit}
   .sticky-cta{display:flex}
   body{padding-bottom:72px}
   .section{padding:64px 0}
-  .workflow-steps{flex-direction:column;align-items:center}
-  .wf-step{max-width:100%;width:100%}
-  .quick-send-row{flex-direction:column}
+  .send-choice{grid-template-columns:1fr}
+  .photo-tip-steps{grid-template-columns:repeat(4,1fr)}
 }
 @media(max-width:480px){
   .hero-stats{flex-direction:column}
   .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
   .stat:last-child{border-bottom:none}
   .social-row{flex-direction:column}
-  .photo-guide-grid{grid-template-columns:1fr}
+  .photo-tip-steps{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -299,10 +275,9 @@ a{text-decoration:none;color:inherit}
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#how-we-work">How It Works</a></li>
       <li><a href="#areas">Areas</a></li>
       <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#quote class="nav-cta">Free Quote</a></li>
+      <li><a href="#quote" class="nav-cta">Free Quote</a></li>
     </ul>
   </div>
 </nav>
@@ -313,12 +288,11 @@ a{text-decoration:none;color:inherit}
   <div class="hero-pattern"></div>
   <div class="hero-content">
     <div class="hero-left">
-      <div class="badge-pill">✓ Fully Insured &nbsp;·&nbsp; Sydney-Wide &nbsp;·&nbsp; Est. 2019</div>
+      <div class="badge-pill">Sydney-Wide &nbsp;·&nbsp; Est. 2019</div>
       <h1 class="hero-title">Professional Gutter Cleaning &amp; Property Maintenance in <span class="gold">Sydney</span></h1>
       <p class="hero-sub">Gutters, pressure cleaning, roof repairs and waterproofing — done right, every time. Trusted by homeowners, strata and businesses across Sydney.</p>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num" id="years-counter">0</span><span class="stat-unit">+</span><span class="stat-label">Years experience</span></div>
-        <div class="stat"><span class="stat-num">100</span><span class="stat-unit">%</span><span class="stat-label">Fully insured</span></div>
         <div class="stat"><span class="stat-num">5</span><span class="stat-unit">★</span><span class="stat-label">Google rated</span></div>
       </div>
       <div class="hero-ctas">
@@ -391,71 +365,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- PHOTO GUIDE -->
-<section class="section photo-guide-section" id="how-we-work">
-  <div class="container">
-    <div class="section-label">Before You Reach Out</div>
-    <h2 class="section-title">How to Send Us Your Photos</h2>
-    <p class="section-sub">Great photos help Hassan give you a faster, more accurate quote. Here's exactly what to shoot — no climbing required.</p>
-    <div class="photo-guide-grid">
-      <div class="photo-step">
-        <div class="photo-step-num">01</div>
-        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="18" width="48" height="36" rx="6"/><circle cx="32" cy="36" r="10"/><rect x="22" y="12" width="20" height="8" rx="3"/></svg></div>
-        <h4>Front of the house</h4>
-        <p>Stand back so the full roofline and gutters are visible. A wide shot from the footpath works perfectly.</p>
-        <div class="photo-tip">📸 Capture all sides if possible</div>
-      </div>
-      <div class="photo-step">
-        <div class="photo-step-num">02</div>
-        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 52 L32 16 L56 52 Z" stroke-linejoin="round"/><path d="M20 44 L44 44" stroke-linecap="round" opacity="0.5"/></svg></div>
-        <h4>Roof type &amp; pitch</h4>
-        <p>A side angle showing the roof slope helps Hassan assess job complexity and safety requirements.</p>
-        <div class="photo-tip">📸 Single or double storey matters</div>
-      </div>
-      <div class="photo-step">
-        <div class="photo-step-num">03</div>
-        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 36 Q12 24 20 24 L44 24 Q52 24 52 32 L52 44 Q52 52 44 52 L20 52 Q12 52 12 44 Z"/><path d="M20 24 L20 18 M44 24 L44 18" stroke-linecap="round"/></svg></div>
-        <h4>Close-up of gutters</h4>
-        <p>A shot showing how full or blocked they are. Street level is fine — don't climb up.</p>
-        <div class="photo-tip">📸 Don't climb — stay safe</div>
-      </div>
-      <div class="photo-step">
-        <div class="photo-step-num">04</div>
-        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 8 L20 56 M20 8 Q20 4 24 4 L32 4" stroke-linecap="round"/><path d="M20 22 Q34 14 50 30" stroke-linecap="round"/><path d="M20 38 Q34 30 50 46" stroke-linecap="round" opacity="0.4"/></svg></div>
-        <h4>Downpipe location</h4>
-        <p>Show where the downpipes run — especially any that look blocked or are overflowing.</p>
-        <div class="photo-tip">📸 Check after rain for overflow</div>
-      </div>
-      <div class="photo-step">
-        <div class="photo-step-num">05</div>
-        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="10" y="20" width="44" height="32" rx="4"/><path d="M10 34 L54 34"/><path d="M24 20 L24 52 M40 20 L40 52" opacity="0.4"/></svg></div>
-        <h4>Any problem areas</h4>
-        <p>Cracked tiles, rust, sagging gutters, water stains on ceilings — photograph anything that looks wrong.</p>
-        <div class="photo-tip">📸 Interior ceiling stains count too</div>
-      </div>
-      <div class="photo-step photo-step--cta">
-        <div class="photo-step-num">→</div>
-        <h4>Ready? Send them through</h4>
-        <p>Once you have your photos, pick the easiest way to reach Hassan and he'll get back to you quickly:</p>
-        <div class="send-options">
-          <a href="https://wa.me/61423540616?text=Hi%20Hassan!%20I%27m%20interested%20in%20a%20free%20quote%20from%20Lion%20Gutter%20Cleaning.%20Here%20are%20some%20photos%20of%20my%20property%20%F0%9F%91%87" class="send-btn send-btn--wa" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-            WhatsApp Hassan
-          </a>
-          <a href="https://m.me/lionguttercleaning" class="send-btn send-btn--fb" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            Facebook Messenger
-          </a>
-          <a href="mailto:hassan@lionguttercleaning.com.au?subject=Quote%20Request&body=Hi%20Hassan%2C%0A%0AI%27m%20interested%20in%20a%20free%20quote.%20Photos%20attached.%0A%0AProperty%3A%20%0AService%20needed%3A%20" class="send-btn send-btn--email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email with Photos
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- QUOTE FORM -->
 <section class="section quote-section" id="quote">
   <div class="container">
@@ -464,55 +373,134 @@ a{text-decoration:none;color:inherit}
     <p class="section-sub">No obligation. Hassan will get back to you within a few hours.</p>
     <div class="quote-grid">
       <div class="quote-form-wrap">
-        <form id="quoteForm">
+        <form id="quoteForm" novalidate>
           <div class="form-row">
-            <div class="form-group"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Smith" required></div>
-            <div class="form-group"><label for="phone">Phone number</label><input type="tel" id="phone" placeholder="04XX XXX XXX" required></div>
+            <div class="form-group">
+              <label for="name">Your name *</label>
+              <input type="text" id="name" placeholder="Jane Smith">
+              <div class="form-error" id="nameErr">Please enter your name</div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number *</label>
+              <input type="tel" id="phone" placeholder="04XX XXX XXX">
+              <div class="form-error" id="phoneErr">Please enter your phone number</div>
+            </div>
           </div>
-          <div class="form-group"><label for="email">Email address</label><input type="email" id="email" placeholder="jane@example.com" required></div>
-          <div class="form-group"><label for="address">Property address</label><input type="text" id="address" placeholder="12 Example St, Manly NSW 2095" required></div>
+          <div class="form-group">
+            <label for="emailField">Email address</label>
+            <input type="email" id="emailField" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="address">Property address *</label>
+            <input type="text" id="address" placeholder="12 Example St, Manly NSW 2095">
+            <div class="form-error" id="addressErr">Please enter the property address</div>
+          </div>
           <div class="form-group">
             <label>Services needed</label>
             <div class="checkbox-grid">
-              <label class="checkbox-item"><input type="checkbox"><span>Gutter Cleaning</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Pressure Cleaning</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Roof Cleaning</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Roof Repairs</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Waterproofing</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Gutter Guard</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Downpipe Clearing</span></label>
-              <label class="checkbox-item"><input type="checkbox"><span>Not sure — just check</span></label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Gutter Cleaning">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Gutter Cleaning</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Pressure Cleaning">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Pressure Cleaning</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Roof Cleaning">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Roof Cleaning</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Roof Repairs">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Roof Repairs</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Waterproofing">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Waterproofing</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Gutter Guard">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Gutter Guard</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Downpipe Clearing">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Downpipe Clearing</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" value="Not sure — just check">
+                <span class="checkbox-box"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span>Not sure — just check</span>
+              </label>
             </div>
           </div>
-          <div class="form-group"><label for="storeys">How many storeys?</label><select id="storeys"><option value="">Select...</option><option>Single storey</option><option>Double storey</option><option>3+ storeys</option></select></div>
-          <div class="form-group"><label for="message">Anything else Hassan should know?</label><textarea id="message" rows="3" placeholder="e.g. Last cleaned 2 years ago, visible leaf buildup, overflow during rain..."></textarea></div>
           <div class="form-group">
-            <label>Attach photos (optional but highly recommended)</label>
-            <div class="file-upload-area" id="uploadArea">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><path d="M24 32 L24 14 M16 22 L24 14 L32 22" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="34" width="28" height="8" rx="3"/></svg>
-              <p>Drag &amp; drop photos, or <span class="upload-link">browse</span></p>
-              <p class="upload-hint">JPG, PNG — up to 10MB each</p>
-              <input type="file" id="photoUpload" accept="image/*" multiple style="display:none">
+            <label for="storeys">How many storeys?</label>
+            <select id="storeys">
+              <option value="">Select...</option>
+              <option>Single storey</option>
+              <option>Double storey</option>
+              <option>3+ storeys</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Anything else Hassan should know?</label>
+            <textarea id="message" rows="3" placeholder="e.g. Last cleaned 2 years ago, visible leaf buildup, overflow during rain..."></textarea>
+          </div>
+
+          <!-- PHOTO TIP -->
+          <div class="photo-tip-box">
+            <div class="photo-tip-title">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><circle cx="12" cy="13" r="3"/></svg>
+              Photos help Hassan quote faster — send them with your message
             </div>
-            <div id="fileList" class="file-list"></div>
+            <div class="photo-tip-steps">
+              <div class="tip-step">
+                <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"><rect x="6" y="14" width="36" height="28" rx="5"/><circle cx="24" cy="28" r="8"/><rect x="16" y="8" width="16" height="8" rx="3"/></svg>
+                <span>Front of house</span>
+              </div>
+              <div class="tip-step">
+                <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"><path d="M6 38 L24 12 L42 38 Z"/><path d="M14 32 L34 32"/></svg>
+                <span>Roof &amp; pitch</span>
+              </div>
+              <div class="tip-step">
+                <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-width="1.6"><path d="M10 28 Q10 18 18 18 L30 18 Q38 18 38 26 L38 34 Q38 40 30 40 L18 40 Q10 40 10 34 Z"/><path d="M18 18 L18 14 M30 18 L30 14"/></svg>
+                <span>Gutters close-up</span>
+              </div>
+              <div class="tip-step">
+                <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-width="1.6"><path d="M18 6 L18 42 M18 6 Q18 3 22 3 L28 3"/><path d="M18 18 Q28 12 40 24"/><path d="M18 32 Q28 26 40 38" opacity="0.4"/></svg>
+                <span>Downpipes</span>
+              </div>
+            </div>
+            <p class="photo-tip-note">Stay at street level — no climbing needed. Send a few shots with your message below.</p>
           </div>
-          <div class="form-or"><span>Or send photos directly via</span></div>
-          <div class="quick-send-row">
-            <a href="https://wa.me/61423540616?text=Hi%20Hassan!%20Quote%20request%20%F0%9F%91%87" class="quick-send-btn quick-wa" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://m.me/lionguttercleaning" class="quick-send-btn quick-fb" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              Messenger
-            </a>
+
+          <!-- SEND CHOICE -->
+          <div class="form-group" style="margin-bottom:0">
+            <label style="margin-bottom:12px">How would you like to send your quote request?</label>
+            <div class="send-choice">
+              <button type="button" class="send-choice-btn send-btn-wa" id="sendWhatsapp">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                Send via WhatsApp
+              </button>
+              <button type="button" class="send-choice-btn send-btn-email" id="sendEmail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Send via Email
+              </button>
+            </div>
+            <div class="form-error" id="formErr" style="margin-top:10px">Please fill in your name, phone and address before sending.</div>
           </div>
-          <button type="submit" class="btn btn-gold btn-full" style="font-size:16px;padding:16px;">Send Quote Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
         </form>
         <div id="formSuccess" style="display:none" class="form-success">
           <div class="success-icon">✓</div>
-          <h3>Quote request sent!</h3>
-          <p>Hassan will be in touch within a few hours. Keep an eye on your phone for a message from 0423 540 616.</p>
+          <h3>Message drafted!</h3>
+          <p>Your quote request is ready to send. Hassan will be in touch within a few hours — keep an eye on your phone for a message from 0423 540 616.</p>
         </div>
       </div>
       <div class="quote-sidebar">
@@ -529,26 +517,20 @@ a{text-decoration:none;color:inherit}
         </div>
         <div class="sidebar-card sidebar-card--contact">
           <h4>Prefer to call or message?</h4>
-          <a href="tel:0423540616" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg> 0423 540 616</a>
-          <a href="https://wa.me/61423540616" class="contact-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> WhatsApp</a>
-          <a href="mailto:hassan@lionguttercleaning.com.au" class="contact-link contact-link--email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hassan@lionguttercleaning.com.au</a>
+          <a href="tel:0423540616" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>
+            0423 540 616
+          </a>
+          <a href="https://wa.me/61423540616" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:hassan@lionguttercleaning.com.au" class="contact-link contact-link--email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hassan@lionguttercleaning.com.au
+          </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- REMINDER WORKFLOW -->
-<section class="workflow-section">
-  <div class="workflow-inner">
-    <div class="section-label">How Hassan Stays in Touch</div>
-    <h2 class="section-title">The Return Reminder System</h2>
-    <p class="section-sub">After every job, Hassan logs the date. When it's time for your next clean — typically 12 months later — he'll reach out personally so you never have to remember.</p>
-    <div class="workflow-steps">
-      <div class="wf-step"><div class="wf-num">1</div><h4>Job completed</h4><p>Hassan logs your details and service date after every visit.</p></div>
-      <div class="wf-step"><div class="wf-num">2</div><h4>Reminder set</h4><p>A reminder is scheduled for 12 months — or whatever suits your property.</p></div>
-      <div class="wf-step"><div class="wf-num">3</div><h4>Hassan notified</h4><p>When it's time, Hassan gets an alert so he can reach out directly.</p></div>
-      <div class="wf-step"><div class="wf-num">4</div><h4>Personal follow-up</h4><p>No spam — just a friendly message to rebook if the gutters are due.</p></div>
     </div>
   </div>
 </section>
@@ -645,19 +627,25 @@ a{text-decoration:none;color:inherit}
         <p class="footer-abn">Fully Insured · ABN available on request</p>
       </div>
     </div>
-    <div class="footer-bottom"><p>© <span id="year"></span> Lion Gutter Cleaning · <a href="https://lionguttercleaning.com.au">lionguttercleaning.com.au</a> · All rights reserved</p></div>
+    <div class="footer-bottom"><p>© <span id="year"></span> Lion Gutter Cleaning · All rights reserved</p></div>
   </div>
 </footer>
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="tel:0423540616" class="sticky-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg> Call</a>
+  <a href="tel:0423540616" class="sticky-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>
+    Call
+  </a>
   <a href="#quote" class="sticky-quote">Free Quote</a>
-  <a href="https://wa.me/61423540616?text=Hi%20Hassan!%20Quote%20please%20%F0%9F%91%87" target="_blank" rel="noopener" class="sticky-wa"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> WhatsApp</a>
+  <a href="https://wa.me/61423540616" target="_blank" rel="noopener" class="sticky-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    WhatsApp
+  </a>
 </div>
 
 <script>
-// Auto-calculate years from 2019
+// Years counter
 (function(){
   const years = new Date().getFullYear() - 2019;
   const el = document.getElementById('years-counter');
@@ -673,40 +661,96 @@ document.getElementById('hamburger').addEventListener('click', function(){
 });
 document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open')));
 
-// File upload
-const uploadArea = document.getElementById('uploadArea');
-const photoInput = document.getElementById('photoUpload');
-const fileList = document.getElementById('fileList');
-uploadArea.addEventListener('click', () => photoInput.click());
-uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.style.borderColor='var(--gold)'; });
-uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor=''; });
-uploadArea.addEventListener('drop', e => { e.preventDefault(); uploadArea.style.borderColor=''; handleFiles(e.dataTransfer.files); });
-photoInput.addEventListener('change', () => handleFiles(photoInput.files));
-function handleFiles(files){
-  fileList.innerHTML='';
-  Array.from(files).forEach(f => {
-    const tag = document.createElement('div');
-    tag.className='file-tag';
-    tag.textContent='📎 '+f.name;
-    fileList.appendChild(tag);
+// Custom checkboxes — toggle checked class
+document.querySelectorAll('.checkbox-item input[type=checkbox]').forEach(function(cb){
+  cb.addEventListener('change', function(){
+    this.closest('.checkbox-item').classList.toggle('checked', this.checked);
   });
+});
+
+// Collect form data
+function getFormData() {
+  const name    = document.getElementById('name').value.trim();
+  const phone   = document.getElementById('phone').value.trim();
+  const email   = document.getElementById('emailField').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const storeys = document.getElementById('storeys').value;
+  const message = document.getElementById('message').value.trim();
+  const services = [...document.querySelectorAll('.checkbox-item.checked input')].map(i => i.value).join(', ');
+  return { name, phone, email, address, storeys, message, services };
 }
 
-// Form submit → WhatsApp
-document.getElementById('quoteForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phone').value;
-  const address = document.getElementById('address').value;
-  const storeys = document.getElementById('storeys').value;
-  const message = document.getElementById('message').value;
-  const services = [...document.querySelectorAll('input[type=checkbox]:checked')].map(c => c.closest('.checkbox-item').querySelector('span').textContent).join(', ');
-  const text = encodeURIComponent(
-    `Hi Hassan! I'd like a free quote from Lion Gutter Cleaning.\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nStoreys: ${storeys||'Not specified'}\nServices: ${services||'Not specified'}${message?'\nNotes: '+message:''}`
-  );
-  document.getElementById('quoteForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
-  setTimeout(()=>{ window.open(`https://wa.me/61423540616?text=${text}`,'_blank'); }, 800);
+function validate() {
+  const d = getFormData();
+  let ok = true;
+  ['name','phone','address'].forEach(function(field){
+    const val = document.getElementById(field).value.trim();
+    const err = document.getElementById(field + 'Err');
+    if (!val) { err.style.display = 'block'; ok = false; }
+    else { err.style.display = 'none'; }
+  });
+  return ok;
+}
+
+function showSuccess() {
+  document.getElementById('quoteForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+  document.getElementById('formErr').style.display = 'none';
+}
+
+document.getElementById('sendWhatsapp').addEventListener('click', function(){
+  if (!validate()) {
+    document.getElementById('formErr').style.display = 'block';
+    return;
+  }
+  document.getElementById('formErr').style.display = 'none';
+  const d = getFormData();
+  const lines = [
+    "Hi Hassan! I'd like a free quote from Lion Gutter Cleaning.",
+    "",
+    "Name: " + d.name,
+    "Phone: " + d.phone,
+    d.email ? "Email: " + d.email : null,
+    "Address: " + d.address,
+    "Storeys: " + (d.storeys || 'Not specified'),
+    "Services: " + (d.services || 'Not specified'),
+    d.message ? "Notes: " + d.message : null,
+    "",
+    "I'll send a few photos of the property shortly."
+  ].filter(l => l !== null).join('\n');
+  showSuccess();
+  setTimeout(function(){ window.open('https://wa.me/61423540616?text=' + encodeURIComponent(lines), '_blank'); }, 500);
+});
+
+document.getElementById('sendEmail').addEventListener('click', function(){
+  if (!validate()) {
+    document.getElementById('formErr').style.display = 'block';
+    return;
+  }
+  document.getElementById('formErr').style.display = 'none';
+  const d = getFormData();
+  const subject = 'Free Quote Request – ' + d.name;
+  const body = [
+    'Hi Hassan,',
+    '',
+    "I'd like a free quote for the following:",
+    '',
+    'Name: ' + d.name,
+    'Phone: ' + d.phone,
+    d.email ? 'Email: ' + d.email : null,
+    'Address: ' + d.address,
+    'Storeys: ' + (d.storeys || 'Not specified'),
+    'Services needed: ' + (d.services || 'Not specified'),
+    d.message ? 'Notes: ' + d.message : null,
+    '',
+    "I'll attach a few photos of the property.",
+    '',
+    'Thanks'
+  ].filter(l => l !== null).join('\n');
+  showSuccess();
+  setTimeout(function(){
+    window.location.href = 'mailto:hassan@lionguttercleaning.com.au?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }, 500);
 });
 </script>
 </body>
