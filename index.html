@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lion Gutter Cleaning | Sydney's Trusted Gutter & Property Maintenance Specialists</title>
+<meta name="description" content="Professional gutter cleaning, pressure washing, roof repairs and waterproofing across Sydney. Fully insured. Serving Northern Beaches, North Sydney and all Sydney suburbs since 2019.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a2e4a;
+  --navy-dark: #0f1c2e;
+  --navy-mid: #243654;
+  --gold: #c8922a;
+  --gold-light: #e4a93c;
+  --gold-pale: #f5e6c8;
+  --blue-accent: #4a8db5;
+  --white: #ffffff;
+  --off-white: #f8f6f2;
+  --text-muted: #6b7280;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 4px 24px rgba(26,46,74,0.10);
+  --shadow-lg: 0 12px 48px rgba(26,46,74,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,146,42,0.25);transition:all 0.3s}
+.nav-inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo img{height:46px;width:46px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.nav-logo-name{color:var(--white);font-weight:600;font-size:15px;line-height:1.2}
+.nav-logo-name span{color:var(--gold-light);display:block;font-size:11px;font-weight:400;letter-spacing:0.05em}
+.nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.82);font-size:14px;font-weight:500;padding:8px 14px;border-radius:8px;transition:all 0.2s}
+.nav-links a:hover{color:var(--gold-light);background:rgba(200,146,42,0.12)}
+.nav-cta{background:var(--gold)!important;color:var(--navy-dark)!important;font-weight:600!important;border-radius:10px!important}
+.nav-cta:hover{background:var(--gold-light)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;display:block}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--navy-dark);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(200,146,42,0.10) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(74,141,181,0.08) 0%,transparent 50%)}
+.hero-pattern{position:absolute;inset:0;opacity:0.025;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-content{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+.badge-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(200,146,42,0.15);border:1px solid rgba(200,146,42,0.4);color:var(--gold-light);font-size:12px;font-weight:500;letter-spacing:0.05em;padding:6px 16px;border-radius:50px;margin-bottom:24px;animation:fadeUp 0.6s ease both}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,56px);font-weight:900;line-height:1.1;color:var(--white);margin-bottom:20px;animation:fadeUp 0.6s 0.1s ease both}
+.hero-title .gold{color:var(--gold-light)}
+.hero-sub{font-size:17px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:32px;animation:fadeUp 0.6s 0.2s ease both}
+.hero-stats{display:flex;margin-bottom:36px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;animation:fadeUp 0.6s 0.3s ease both}
+.stat{flex:1;padding:18px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.08)}
+.stat:last-child{border-right:none}
+.stat-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:var(--gold-light);display:inline}
+.stat-unit{font-size:20px;color:var(--gold-light);font-weight:700}
+.stat-label{display:block;font-size:11px;color:rgba(255,255,255,0.55);margin-top:4px;letter-spacing:0.04em}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 0.6s 0.4s ease both}
+
+/* HERO RIGHT */
+.hero-right{display:flex;justify-content:center;align-items:center;animation:fadeUp 0.8s 0.15s ease both}
+.hero-logo-wrap{position:relative;width:320px;height:320px}
+.hero-logo-wrap::before{content:'';position:absolute;inset:-20px;border-radius:50%;border:2px solid rgba(200,146,42,0.2);animation:spin 20s linear infinite}
+.hero-logo-wrap::after{content:'';position:absolute;inset:-40px;border-radius:50%;border:1px solid rgba(200,146,42,0.1);animation:spin 30s linear infinite reverse}
+.hero-logo-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--gold);box-shadow:0 0 60px rgba(200,146,42,0.25),0 0 120px rgba(200,146,42,0.1)}
+.hero-tagline{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--gold);color:var(--navy-dark);font-size:11px;font-weight:700;letter-spacing:0.12em;padding:6px 20px;border-radius:50px}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.4);font-size:11px;letter-spacing:0.1em;animation:fadeUp 1s 0.8s ease both;z-index:2}
+.scroll-dot{width:6px;height:6px;border-radius:50%;background:var(--gold-light);opacity:0.6;animation:bounce 2s ease-in-out infinite}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s ease;border:none;text-decoration:none;font-family:'DM Sans',sans-serif}
+.btn-gold{background:var(--gold);color:var(--navy-dark);box-shadow:0 4px 16px rgba(200,146,42,0.35)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,146,42,0.45)}
+.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.3)}
+.btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+.btn-full{width:100%;justify-content:center}
+
+/* SECTIONS */
+.section{padding:96px 0}
+.section-label{font-size:12px;font-weight:600;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.2}
+.section-sub{font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:48px}
+
+/* SERVICES */
+.services-section{background:var(--off-white)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid rgba(26,46,74,0.07);box-shadow:var(--shadow);transition:all 0.3s ease;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));opacity:0;transition:opacity 0.3s}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.service-card:hover::before{opacity:1}
+.service-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.service-icon svg{width:28px;height:28px;stroke:var(--gold-light)}
+.service-card h3{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.service-card p{font-size:14px;color:var(--text-muted);line-height:1.65}
+.service-card--highlight{background:var(--navy)}
+.service-card--highlight h3{color:var(--white)}
+.service-card--highlight p{color:rgba(255,255,255,0.65)}
+.service-card--highlight .service-icon{background:rgba(200,146,42,0.2)}
+.card-badge{display:inline-block;margin-top:14px;background:rgba(200,146,42,0.2);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:0.08em;padding:4px 12px;border-radius:50px}
+
+/* PHOTO GUIDE */
+.photo-guide-section{background:var(--white)}
+.photo-guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.photo-step{background:var(--off-white);border-radius:var(--radius);padding:28px;border:1px solid rgba(26,46,74,0.07);position:relative}
+.photo-step-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px}
+.photo-step-icon{width:56px;height:56px;margin-bottom:14px}
+.photo-step-icon svg{width:56px;height:56px;stroke:var(--navy-mid)}
+.photo-step h4{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.photo-step p{font-size:14px;color:var(--text-muted);line-height:1.65;margin-bottom:12px}
+.photo-tip{font-size:12px;color:var(--navy-mid);font-weight:500;background:rgba(26,46,74,0.07);border-radius:8px;padding:8px 12px}
+.photo-step--cta{background:var(--navy)}
+.photo-step--cta .photo-step-num{color:var(--gold-light);opacity:0.5}
+.photo-step--cta h4{color:var(--white)}
+.photo-step--cta p{color:rgba(255,255,255,0.65);margin-bottom:20px}
+.send-options{display:flex;flex-direction:column;gap:10px}
+.send-btn{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;transition:all 0.2s;cursor:pointer;font-family:'DM Sans',sans-serif}
+.send-btn--wa{background:#25D366;color:white}
+.send-btn--wa:hover{background:#1ebe5a;transform:translateX(3px)}
+.send-btn--fb{background:#0866FF;color:white}
+.send-btn--fb:hover{background:#0554d4;transform:translateX(3px)}
+.send-btn--email{background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.2)}
+.send-btn--email:hover{background:rgba(255,255,255,0.2);transform:translateX(3px)}
+
+/* QUOTE */
+.quote-section{background:var(--off-white)}
+.quote-grid{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:start}
+.quote-form-wrap{background:var(--white);border-radius:var(--radius);padding:40px;border:1px solid rgba(26,46,74,0.08);box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid rgba(26,46,74,0.15);border-radius:var(--radius-sm);font-size:14px;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);transition:border-color 0.2s;outline:none;appearance:none;-webkit-appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,146,42,0.1)}
+.form-group textarea{resize:vertical;min-height:90px}
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.checkbox-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--radius-sm);border:1.5px solid rgba(26,46,74,0.12);cursor:pointer;transition:all 0.2s;font-size:13px;background:var(--off-white)}
+.checkbox-item:hover{border-color:var(--gold);background:var(--gold-pale)}
+.checkbox-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--gold);flex-shrink:0}
+.file-upload-area{border:2px dashed rgba(26,46,74,0.2);border-radius:var(--radius-sm);padding:28px;text-align:center;cursor:pointer;transition:all 0.2s;color:var(--text-muted);font-size:14px}
+.file-upload-area:hover{border-color:var(--gold);background:var(--gold-pale)}
+.file-upload-area svg{margin:0 auto 12px;color:var(--text-muted)}
+.upload-link{color:var(--gold);font-weight:600;cursor:pointer}
+.upload-hint{font-size:12px;color:var(--text-muted);margin-top:4px}
+.file-list{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.file-tag{display:flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(200,146,42,0.3);color:var(--navy);font-size:12px;font-weight:500;padding:4px 10px;border-radius:50px}
+.form-or{text-align:center;color:var(--text-muted);font-size:13px;margin:16px 0;position:relative}
+.form-or::before,.form-or::after{content:'';position:absolute;top:50%;width:38%;height:1px;background:rgba(26,46,74,0.1)}
+.form-or::before{left:0}.form-or::after{right:0}
+.quick-send-row{display:flex;gap:10px;margin-bottom:20px}
+.quick-send-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.quick-wa{background:#25D366;color:white}
+.quick-wa:hover{background:#1ebe5a}
+.quick-fb{background:#0866FF;color:white}
+.quick-fb:hover{background:#0554d4}
+.form-success{text-align:center;padding:60px 20px}
+.success-icon{width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--navy-dark);font-size:28px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.form-success h3{font-size:22px;color:var(--navy);margin-bottom:10px}
+.form-success p{color:var(--text-muted);font-size:15px}
+
+/* SIDEBAR */
+.quote-sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid rgba(26,46,74,0.08);box-shadow:var(--shadow)}
+.sidebar-card h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.why-list li{font-size:14px;color:var(--text-muted);display:flex;gap:10px;align-items:flex-start}
+.check{color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
+.sidebar-card--contact{background:var(--navy)}
+.sidebar-card--contact h4{color:var(--white)}
+.contact-link{display:flex;align-items:center;gap:12px;color:var(--white);font-size:14px;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);transition:color 0.2s}
+.contact-link:hover{color:var(--gold-light)}
+.contact-link:last-child{border-bottom:none}
+.contact-link svg{color:var(--gold-light);flex-shrink:0}
+.contact-link--email{word-break:break-all;font-size:12px}
+
+/* AREAS */
+.areas-section{background:var(--navy)}
+.areas-section .section-label{color:var(--gold-light)}
+.areas-section .section-title{color:var(--white)}
+.areas-section .section-sub{color:rgba(255,255,255,0.6)}
+.areas-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.area-pill{padding:10px 18px;border-radius:50px;font-size:14px;font-weight:500;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.12);transition:all 0.2s}
+.area-pill:hover{background:rgba(200,146,42,0.15);border-color:rgba(200,146,42,0.4);color:var(--gold-light)}
+.area-pill--preferred{background:rgba(200,146,42,0.15);color:var(--gold-light);border-color:rgba(200,146,42,0.4);font-weight:600}
+.areas-note{font-size:14px;color:rgba(255,255,255,0.5)}
+.areas-note a{color:var(--gold-light);text-decoration:underline}
+
+/* REVIEWS */
+.testimonials-section{background:var(--off-white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:36px}
+.review-card{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid rgba(26,46,74,0.07);box-shadow:var(--shadow);transition:all 0.3s}
+.review-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.review-stars{color:var(--gold);font-size:18px;margin-bottom:14px;letter-spacing:2px}
+.review-card p{font-size:15px;color:var(--navy-mid);line-height:1.7;margin-bottom:16px;font-style:italic}
+.reviewer{font-size:12px;color:var(--text-muted);font-weight:600}
+.google-link-wrap{text-align:center}
+.google-link-wrap .btn-outline{color:var(--navy);border-color:rgba(26,46,74,0.2)}
+.google-link-wrap .btn-outline:hover{color:var(--gold);border-color:var(--gold)}
+
+/* SOCIAL */
+.social-section{background:var(--white)}
+.social-row{display:flex;gap:20px;flex-wrap:wrap}
+.social-card{flex:1;min-width:180px;display:flex;flex-direction:column;align-items:center;gap:10px;padding:32px 20px;border-radius:var(--radius);border:1.5px solid rgba(26,46,74,0.1);text-align:center;transition:all 0.3s;color:var(--navy)}
+.social-card:hover{border-color:var(--gold);background:var(--gold-pale);transform:translateY(-4px)}
+.social-card>span:first-of-type{font-weight:600;font-size:15px}
+.social-sub{font-size:12px;color:var(--text-muted)}
+
+/* REMINDER WORKFLOW */
+.workflow-section{background:var(--navy-dark);padding:72px 0}
+.workflow-inner{max-width:900px;margin:0 auto;padding:0 24px;text-align:center}
+.workflow-inner .section-label{color:var(--gold-light)}
+.workflow-inner .section-title{color:var(--white);margin-bottom:12px}
+.workflow-inner .section-sub{color:rgba(255,255,255,0.6);margin:0 auto 40px;max-width:600px}
+.workflow-steps{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.wf-step{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:24px;flex:1;min-width:190px;max-width:220px;text-align:center}
+.wf-num{width:36px;height:36px;border-radius:50%;background:var(--gold);color:var(--navy-dark);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.wf-step h4{color:var(--white);font-size:15px;font-weight:600;margin-bottom:8px}
+.wf-step p{color:rgba(255,255,255,0.55);font-size:13px;line-height:1.6}
+
+/* FOOTER */
+.footer{background:var(--navy-dark);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-logo{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:700;color:var(--white);margin-bottom:16px}
+.footer-logo img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:20px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all 0.2s}
+.footer-social a:hover{background:var(--gold);color:var(--navy-dark);border-color:var(--gold)}
+.footer-links h5,.footer-contact h5{color:var(--white);font-size:14px;font-weight:600;margin-bottom:16px;letter-spacing:0.05em}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{font-size:14px;color:rgba(255,255,255,0.5);transition:color 0.2s}
+.footer-links li a:hover{color:var(--gold-light)}
+.footer-contact{display:flex;flex-direction:column;gap:10px}
+.footer-contact a{font-size:14px;color:rgba(255,255,255,0.5);transition:color 0.2s;word-break:break-all}
+.footer-contact a:hover{color:var(--gold-light)}
+.footer-abn{font-size:12px;color:rgba(255,255,255,0.3);margin-top:8px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding:20px 0;text-align:center;font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-bottom a{color:var(--gold-light)}
+
+/* STICKY MOBILE */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;display:none;background:var(--navy-dark);border-top:1px solid rgba(200,146,42,0.25);padding:12px 16px;gap:10px}
+.sticky-call,.sticky-quote,.sticky-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 8px;border-radius:10px;font-size:13px;font-weight:600;font-family:'DM Sans',sans-serif}
+.sticky-call{background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.15)}
+.sticky-quote{background:var(--gold);color:var(--navy-dark)}
+.sticky-wa{background:#25D366;color:white}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;gap:4px;position:absolute;top:68px;left:0;right:0;background:var(--navy-dark);padding:16px;border-bottom:1px solid rgba(200,146,42,0.2)}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 16px;border-radius:10px}
+  .hamburger{display:flex}
+  .hero-content{grid-template-columns:1fr;gap:36px;text-align:center;padding:48px 24px}
+  .hero-right{order:-1}
+  .hero-logo-wrap{width:220px;height:220px}
+  .hero-ctas{justify-content:center}
+  .quote-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .checkbox-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .sticky-cta{display:flex}
+  body{padding-bottom:72px}
+  .section{padding:64px 0}
+  .workflow-steps{flex-direction:column;align-items:center}
+  .wf-step{max-width:100%;width:100%}
+  .quick-send-row{flex-direction:column}
+}
+@media(max-width:480px){
+  .hero-stats{flex-direction:column}
+  .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .stat:last-child{border-bottom:none}
+  .social-row{flex-direction:column}
+  .photo-guide-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="logo.jpg" alt="Lion Gutter Cleaning">
+      <div class="nav-logo-name">Lion Gutter Cleaning <span>Clean · Safe · Reliable</span></div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-we-work">How It Works</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#quote class="nav-cta">Free Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="badge-pill">✓ Fully Insured &nbsp;·&nbsp; Sydney-Wide &nbsp;·&nbsp; Est. 2019</div>
+      <h1 class="hero-title">Professional Gutter Cleaning &amp; Property Maintenance in <span class="gold">Sydney</span></h1>
+      <p class="hero-sub">Gutters, pressure cleaning, roof repairs and waterproofing — done right, every time. Trusted by homeowners, strata and businesses across Sydney.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="years-counter">0</span><span class="stat-unit">+</span><span class="stat-label">Years experience</span></div>
+        <div class="stat"><span class="stat-num">100</span><span class="stat-unit">%</span><span class="stat-label">Fully insured</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-unit">★</span><span class="stat-label">Google rated</span></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#quote" class="btn btn-gold">Get a Free Quote</a>
+        <a href="tel:0423540616" class="btn btn-outline">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>
+          0423 540 616
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-wrap">
+        <img src="logo.jpg" alt="Lion Gutter Cleaning" class="hero-logo-img">
+        <div class="hero-tagline">CLEAN · SAFE · RELIABLE</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>SCROLL</span><div class="scroll-dot"></div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services-section" id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">From routine cleans to full roof repairs — done right the first time.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M8 34 Q24 18 40 34"/><path d="M12 34 L12 42 M24 34 L24 44 M36 34 L36 42"/><path d="M6 26 Q24 8 42 26" opacity="0.4"/></svg></div>
+        <h3>Gutter Cleaning</h3>
+        <p>Complete removal of leaves, debris and blockages. We leave your gutters flowing freely and ready for Sydney's heavy rains.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M10 10 L10 36"/><path d="M10 22 Q22 16 40 30"/><circle cx="40" cy="30" r="4"/><path d="M40 34 Q38 42 30 44" opacity="0.4"/></svg></div>
+        <h3>Pressure Cleaning</h3>
+        <p>Driveways, paths, decks and exterior walls blasted clean with professional-grade equipment. Years of grime — gone.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28 L24 10 L40 28"/><rect x="12" y="28" width="24" height="12" rx="2"/><path d="M8 38 L40 38"/></svg></div>
+        <h3>Roof Cleaning</h3>
+        <p>Safe removal of moss, lichen and built-up grime. Extends roof life and improves your property's street appeal.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28 L24 10 L40 28 L40 42 L8 42 Z"/><path d="M18 42 L18 30 Q18 24 24 24 Q30 24 30 30 L30 42"/></svg></div>
+        <h3>Roof Repairs</h3>
+        <p>Cracked tiles, damaged flashing, leaky ridges — we find the problem and fix it properly. No shortcuts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="8" y="18" width="32" height="22" rx="4"/><path d="M8 26 L40 26"/><circle cx="24" cy="34" r="4" fill="currentColor" opacity="0.2"/></svg></div>
+        <h3>Waterproofing</h3>
+        <p>Prevent costly water damage. Professional waterproofing for roofs, balconies and wet areas — built to last.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M8 28 L24 10 L40 28"/><path d="M10 28 L38 28"/><path d="M10 28 Q10 36 16 36 L32 36 Q38 36 38 28"/><path d="M14 36 L14 42 M24 36 L24 42 M34 36 L34 42" opacity="0.5"/></svg></div>
+        <h3>Gutter Guard</h3>
+        <p>Stop the cleaning cycle. Our gutter guards keep leaves out while letting water through — a smart long-term investment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M24 8 L24 40"/><path d="M24 18 L14 28 M24 18 L34 28"/></svg></div>
+        <h3>Downpipe Clearing</h3>
+        <p>Blocked downpipes cause overflow and foundation damage. We flush, clear and inspect every pipe.</p>
+      </div>
+      <div class="service-card service-card--highlight">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="8" y="10" width="32" height="28" rx="4"/><path d="M8 20 L40 20 M8 30 L40 30"/><path d="M20 10 L20 38 M28 10 L28 38" opacity="0.5"/></svg></div>
+        <h3>Strata &amp; Commercial</h3>
+        <p>We work with real estate agencies, strata managers and commercial property owners. Reliable, documented and fully insured.</p>
+        <div class="card-badge">For businesses too</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GUIDE -->
+<section class="section photo-guide-section" id="how-we-work">
+  <div class="container">
+    <div class="section-label">Before You Reach Out</div>
+    <h2 class="section-title">How to Send Us Your Photos</h2>
+    <p class="section-sub">Great photos help Hassan give you a faster, more accurate quote. Here's exactly what to shoot — no climbing required.</p>
+    <div class="photo-guide-grid">
+      <div class="photo-step">
+        <div class="photo-step-num">01</div>
+        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="18" width="48" height="36" rx="6"/><circle cx="32" cy="36" r="10"/><rect x="22" y="12" width="20" height="8" rx="3"/></svg></div>
+        <h4>Front of the house</h4>
+        <p>Stand back so the full roofline and gutters are visible. A wide shot from the footpath works perfectly.</p>
+        <div class="photo-tip">📸 Capture all sides if possible</div>
+      </div>
+      <div class="photo-step">
+        <div class="photo-step-num">02</div>
+        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 52 L32 16 L56 52 Z" stroke-linejoin="round"/><path d="M20 44 L44 44" stroke-linecap="round" opacity="0.5"/></svg></div>
+        <h4>Roof type &amp; pitch</h4>
+        <p>A side angle showing the roof slope helps Hassan assess job complexity and safety requirements.</p>
+        <div class="photo-tip">📸 Single or double storey matters</div>
+      </div>
+      <div class="photo-step">
+        <div class="photo-step-num">03</div>
+        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 36 Q12 24 20 24 L44 24 Q52 24 52 32 L52 44 Q52 52 44 52 L20 52 Q12 52 12 44 Z"/><path d="M20 24 L20 18 M44 24 L44 18" stroke-linecap="round"/></svg></div>
+        <h4>Close-up of gutters</h4>
+        <p>A shot showing how full or blocked they are. Street level is fine — don't climb up.</p>
+        <div class="photo-tip">📸 Don't climb — stay safe</div>
+      </div>
+      <div class="photo-step">
+        <div class="photo-step-num">04</div>
+        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 8 L20 56 M20 8 Q20 4 24 4 L32 4" stroke-linecap="round"/><path d="M20 22 Q34 14 50 30" stroke-linecap="round"/><path d="M20 38 Q34 30 50 46" stroke-linecap="round" opacity="0.4"/></svg></div>
+        <h4>Downpipe location</h4>
+        <p>Show where the downpipes run — especially any that look blocked or are overflowing.</p>
+        <div class="photo-tip">📸 Check after rain for overflow</div>
+      </div>
+      <div class="photo-step">
+        <div class="photo-step-num">05</div>
+        <div class="photo-step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="10" y="20" width="44" height="32" rx="4"/><path d="M10 34 L54 34"/><path d="M24 20 L24 52 M40 20 L40 52" opacity="0.4"/></svg></div>
+        <h4>Any problem areas</h4>
+        <p>Cracked tiles, rust, sagging gutters, water stains on ceilings — photograph anything that looks wrong.</p>
+        <div class="photo-tip">📸 Interior ceiling stains count too</div>
+      </div>
+      <div class="photo-step photo-step--cta">
+        <div class="photo-step-num">→</div>
+        <h4>Ready? Send them through</h4>
+        <p>Once you have your photos, pick the easiest way to reach Hassan and he'll get back to you quickly:</p>
+        <div class="send-options">
+          <a href="https://wa.me/61423540616?text=Hi%20Hassan!%20I%27m%20interested%20in%20a%20free%20quote%20from%20Lion%20Gutter%20Cleaning.%20Here%20are%20some%20photos%20of%20my%20property%20%F0%9F%91%87" class="send-btn send-btn--wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp Hassan
+          </a>
+          <a href="https://m.me/lionguttercleaning" class="send-btn send-btn--fb" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            Facebook Messenger
+          </a>
+          <a href="mailto:hassan@lionguttercleaning.com.au?subject=Quote%20Request&body=Hi%20Hassan%2C%0A%0AI%27m%20interested%20in%20a%20free%20quote.%20Photos%20attached.%0A%0AProperty%3A%20%0AService%20needed%3A%20" class="send-btn send-btn--email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email with Photos
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="section quote-section" id="quote">
+  <div class="container">
+    <div class="section-label">Free Quote</div>
+    <h2 class="section-title">Request Your Free Quote</h2>
+    <p class="section-sub">No obligation. Hassan will get back to you within a few hours.</p>
+    <div class="quote-grid">
+      <div class="quote-form-wrap">
+        <form id="quoteForm">
+          <div class="form-row">
+            <div class="form-group"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Smith" required></div>
+            <div class="form-group"><label for="phone">Phone number</label><input type="tel" id="phone" placeholder="04XX XXX XXX" required></div>
+          </div>
+          <div class="form-group"><label for="email">Email address</label><input type="email" id="email" placeholder="jane@example.com" required></div>
+          <div class="form-group"><label for="address">Property address</label><input type="text" id="address" placeholder="12 Example St, Manly NSW 2095" required></div>
+          <div class="form-group">
+            <label>Services needed</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-item"><input type="checkbox"><span>Gutter Cleaning</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Pressure Cleaning</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Roof Cleaning</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Roof Repairs</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Waterproofing</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Gutter Guard</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Downpipe Clearing</span></label>
+              <label class="checkbox-item"><input type="checkbox"><span>Not sure — just check</span></label>
+            </div>
+          </div>
+          <div class="form-group"><label for="storeys">How many storeys?</label><select id="storeys"><option value="">Select...</option><option>Single storey</option><option>Double storey</option><option>3+ storeys</option></select></div>
+          <div class="form-group"><label for="message">Anything else Hassan should know?</label><textarea id="message" rows="3" placeholder="e.g. Last cleaned 2 years ago, visible leaf buildup, overflow during rain..."></textarea></div>
+          <div class="form-group">
+            <label>Attach photos (optional but highly recommended)</label>
+            <div class="file-upload-area" id="uploadArea">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><path d="M24 32 L24 14 M16 22 L24 14 L32 22" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="34" width="28" height="8" rx="3"/></svg>
+              <p>Drag &amp; drop photos, or <span class="upload-link">browse</span></p>
+              <p class="upload-hint">JPG, PNG — up to 10MB each</p>
+              <input type="file" id="photoUpload" accept="image/*" multiple style="display:none">
+            </div>
+            <div id="fileList" class="file-list"></div>
+          </div>
+          <div class="form-or"><span>Or send photos directly via</span></div>
+          <div class="quick-send-row">
+            <a href="https://wa.me/61423540616?text=Hi%20Hassan!%20Quote%20request%20%F0%9F%91%87" class="quick-send-btn quick-wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              WhatsApp
+            </a>
+            <a href="https://m.me/lionguttercleaning" class="quick-send-btn quick-fb" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Messenger
+            </a>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full" style="font-size:16px;padding:16px;">Send Quote Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+        </form>
+        <div id="formSuccess" style="display:none" class="form-success">
+          <div class="success-icon">✓</div>
+          <h3>Quote request sent!</h3>
+          <p>Hassan will be in touch within a few hours. Keep an eye on your phone for a message from 0423 540 616.</p>
+        </div>
+      </div>
+      <div class="quote-sidebar">
+        <div class="sidebar-card">
+          <h4>Why choose Lion?</h4>
+          <ul class="why-list">
+            <li><span class="check">✓</span> Fully insured — residential &amp; commercial</li>
+            <li><span class="check">✓</span> 6+ years experience across Sydney</li>
+            <li><span class="check">✓</span> Honest pricing — no hidden charges</li>
+            <li><span class="check">✓</span> Quick response &amp; flexible scheduling</li>
+            <li><span class="check">✓</span> Works with strata, real estate &amp; industrial</li>
+            <li><span class="check">✓</span> Before &amp; after photos provided</li>
+          </ul>
+        </div>
+        <div class="sidebar-card sidebar-card--contact">
+          <h4>Prefer to call or message?</h4>
+          <a href="tel:0423540616" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg> 0423 540 616</a>
+          <a href="https://wa.me/61423540616" class="contact-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> WhatsApp</a>
+          <a href="mailto:hassan@lionguttercleaning.com.au" class="contact-link contact-link--email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hassan@lionguttercleaning.com.au</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REMINDER WORKFLOW -->
+<section class="workflow-section">
+  <div class="workflow-inner">
+    <div class="section-label">How Hassan Stays in Touch</div>
+    <h2 class="section-title">The Return Reminder System</h2>
+    <p class="section-sub">After every job, Hassan logs the date. When it's time for your next clean — typically 12 months later — he'll reach out personally so you never have to remember.</p>
+    <div class="workflow-steps">
+      <div class="wf-step"><div class="wf-num">1</div><h4>Job completed</h4><p>Hassan logs your details and service date after every visit.</p></div>
+      <div class="wf-step"><div class="wf-num">2</div><h4>Reminder set</h4><p>A reminder is scheduled for 12 months — or whatever suits your property.</p></div>
+      <div class="wf-step"><div class="wf-num">3</div><h4>Hassan notified</h4><p>When it's time, Hassan gets an alert so he can reach out directly.</p></div>
+      <div class="wf-step"><div class="wf-num">4</div><h4>Personal follow-up</h4><p>No spam — just a friendly message to rebook if the gutters are due.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section areas-section" id="areas">
+  <div class="container">
+    <div class="section-label">Coverage</div>
+    <h2 class="section-title">Areas We Service</h2>
+    <p class="section-sub">Based in Lidcombe, we travel across all of Sydney. Hassan's preferred areas are the Northern Beaches and North Sydney.</p>
+    <div class="areas-grid">
+      <div class="area-pill area-pill--preferred">Northern Beaches ⭐</div>
+      <div class="area-pill area-pill--preferred">North Sydney ⭐</div>
+      <div class="area-pill">Manly</div><div class="area-pill">Dee Why</div>
+      <div class="area-pill">Chatswood</div><div class="area-pill">Parramatta</div>
+      <div class="area-pill">Lidcombe</div><div class="area-pill">Strathfield</div>
+      <div class="area-pill">Inner West</div><div class="area-pill">Hills District</div>
+      <div class="area-pill">Eastern Suburbs</div><div class="area-pill">Lower North Shore</div>
+      <div class="area-pill">Western Sydney</div><div class="area-pill">+ All Sydney Suburbs</div>
+    </div>
+    <p class="areas-note">Not sure if we cover your suburb? <a href="tel:0423540616">Call Hassan</a> — if we can get there, we will.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section testimonials-section" id="reviews">
+  <div class="container">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Great service, arrived on time and left the place spotless. Would definitely recommend Lion Gutter Cleaning to anyone in Sydney."</p><div class="reviewer">— Google Review</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Hassan was professional, honest about what needed doing, and the price was fair. Gutters are completely clear now. Very happy."</p><div class="reviewer">— Google Review</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Called in the morning, job done by afternoon. Fast, clean, no mess left behind. Will definitely be using Lion again."</p><div class="reviewer">— Google Review</div></div>
+    </div>
+    <div class="google-link-wrap">
+      <a href="https://www.google.com/maps/place/Lion+Gutter+Cleaning/@-33.869613,151.0330909,17.51z" target="_blank" rel="noopener" class="btn btn-outline">See all reviews on Google <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="section social-section">
+  <div class="container">
+    <div class="section-label">Follow Along</div>
+    <h2 class="section-title">See Our Work</h2>
+    <div class="social-row">
+      <a href="https://www.instagram.com/lionguttercleaning" target="_blank" rel="noopener" class="social-card">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        <span>@lionguttercleaning</span><span class="social-sub">Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/share/1Dvvk9q8hX/" target="_blank" rel="noopener" class="social-card">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span>Lion Gutter Cleaning</span><span class="social-sub">Facebook</span>
+      </a>
+      <a href="https://www.tiktok.com/@lionguttercleaning" target="_blank" rel="noopener" class="social-card">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        <span>@lionguttercleaning</span><span class="social-sub">TikTok</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="logo.jpg" alt="Lion Gutter Cleaning"> Lion Gutter Cleaning</div>
+        <p>Sydney's trusted gutter cleaning and property maintenance specialists. Fully insured. Serving all Sydney suburbs since 2019.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/lionguttercleaning" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/share/1Dvvk9q8hX/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@lionguttercleaning" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Gutter Cleaning</a></li>
+          <li><a href="#services">Pressure Cleaning</a></li>
+          <li><a href="#services">Roof Cleaning</a></li>
+          <li><a href="#services">Roof Repairs</a></li>
+          <li><a href="#services">Waterproofing</a></li>
+          <li><a href="#services">Gutter Guard</a></li>
+          <li><a href="#services">Downpipe Clearing</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact Hassan</h5>
+        <a href="tel:0423540616">📞 0423 540 616</a>
+        <a href="https://wa.me/61423540616" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="mailto:hassan@lionguttercleaning.com.au">✉️ hassan@lionguttercleaning.com.au</a>
+        <a href="https://www.google.com/maps/place/Lion+Gutter+Cleaning/@-33.869613,151.0330909" target="_blank" rel="noopener">📍 View on Google Maps</a>
+        <p class="footer-abn">Fully Insured · ABN available on request</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> Lion Gutter Cleaning · <a href="https://lionguttercleaning.com.au">lionguttercleaning.com.au</a> · All rights reserved</p></div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="tel:0423540616" class="sticky-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg> Call</a>
+  <a href="#quote" class="sticky-quote">Free Quote</a>
+  <a href="https://wa.me/61423540616?text=Hi%20Hassan!%20Quote%20please%20%F0%9F%91%87" target="_blank" rel="noopener" class="sticky-wa"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> WhatsApp</a>
+</div>
+
+<script>
+// Auto-calculate years from 2019
+(function(){
+  const years = new Date().getFullYear() - 2019;
+  const el = document.getElementById('years-counter');
+  let c = 0;
+  const t = setInterval(()=>{ el.textContent = ++c; if(c >= years) clearInterval(t); }, 80);
+})();
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', function(){
+  document.getElementById('nav-links').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open')));
+
+// File upload
+const uploadArea = document.getElementById('uploadArea');
+const photoInput = document.getElementById('photoUpload');
+const fileList = document.getElementById('fileList');
+uploadArea.addEventListener('click', () => photoInput.click());
+uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.style.borderColor='var(--gold)'; });
+uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor=''; });
+uploadArea.addEventListener('drop', e => { e.preventDefault(); uploadArea.style.borderColor=''; handleFiles(e.dataTransfer.files); });
+photoInput.addEventListener('change', () => handleFiles(photoInput.files));
+function handleFiles(files){
+  fileList.innerHTML='';
+  Array.from(files).forEach(f => {
+    const tag = document.createElement('div');
+    tag.className='file-tag';
+    tag.textContent='📎 '+f.name;
+    fileList.appendChild(tag);
+  });
+}
+
+// Form submit → WhatsApp
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const address = document.getElementById('address').value;
+  const storeys = document.getElementById('storeys').value;
+  const message = document.getElementById('message').value;
+  const services = [...document.querySelectorAll('input[type=checkbox]:checked')].map(c => c.closest('.checkbox-item').querySelector('span').textContent).join(', ');
+  const text = encodeURIComponent(
+    `Hi Hassan! I'd like a free quote from Lion Gutter Cleaning.\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nStoreys: ${storeys||'Not specified'}\nServices: ${services||'Not specified'}${message?'\nNotes: '+message:''}`
+  );
+  document.getElementById('quoteForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+  setTimeout(()=>{ window.open(`https://wa.me/61423540616?text=${text}`,'_blank'); }, 800);
+});
+</script>
+</body>
+</html>
