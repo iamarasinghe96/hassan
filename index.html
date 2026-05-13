@@ -107,7 +107,7 @@ a{text-decoration:none;color:inherit}
 /* QUOTE */
 .quote-section{background:var(--off-white)}
 .quote-grid{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:start}
-.quote-form-wrap{background:var(--white);border-radius:var(--radius);padding:40px;border:1px solid rgba(26,46,74,0.08);box-shadow:var(--shadow)}
+.quote-form-wrap{background:var(--white);border-radius:var(--radius);padding:40px;border:1px solid rgba(26,46,74,0.08);box-shadow:var(--shadow);min-height:600px;display:flex;flex-direction:column;justify-content:center}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-group{margin-bottom:20px}
 .form-group label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:8px}
@@ -665,8 +665,10 @@ function validate() {
 
 function showSuccess() {
   document.getElementById('quoteForm').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
   document.getElementById('formErr').style.display = 'none';
+  const success = document.getElementById('formSuccess');
+  success.style.display = 'block';
+  setTimeout(function(){ success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
 }
 
 document.getElementById('sendWhatsapp').addEventListener('click', function(){
