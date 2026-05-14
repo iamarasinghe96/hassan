@@ -26,7 +26,7 @@
   --shadow-lg: 0 12px 48px rgba(26,46,74,0.18);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden;overscroll-behavior-x:none}
+html{scroll-behavior:smooth;overflow-x:hidden;overscroll-behavior-x:none;background:var(--navy-dark)}
 body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y;line-height:1.6}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
@@ -227,8 +227,9 @@ a{text-decoration:none;color:inherit}
 .contact-card-icon--email{background:rgba(200,146,42,0.2)}
 .contact-card-icon--map{background:rgba(200,146,42,0.2)}
 .contact-card-label{font-size:11px;color:rgba(255,255,255,0.45);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
-.contact-card-value{font-size:16px;font-weight:700;color:var(--white)}
-.contact-card-sub{font-size:13px;color:rgba(255,255,255,0.5);margin-top:2px;word-break:break-all}
+.contact-card-value{font-size:15px;font-weight:700;color:var(--white);overflow-wrap:break-word;word-break:break-all;min-width:0}
+.contact-card-sub{font-size:13px;color:rgba(255,255,255,0.5);margin-top:2px}
+.contact-card-text{min-width:0;overflow:hidden}
 
 /* FOOTER */
 .footer{background:var(--navy-dark);padding:64px 0 0;border-top:1px solid rgba(255,255,255,0.06)}
