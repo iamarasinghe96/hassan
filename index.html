@@ -26,8 +26,8 @@
   --shadow-lg: 0 12px 48px rgba(26,46,74,0.18);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden;overscroll-behavior-x:none;background:var(--navy-dark)}
-body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--navy-dark);overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y;line-height:1.6}
+html{scroll-behavior:smooth;overflow-x:hidden;overscroll-behavior:none;background:var(--navy-dark)}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--navy-dark);overflow-x:hidden;overscroll-behavior:none;touch-action:pan-y;line-height:1.6}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .container{max-width:1160px;margin:0 auto;padding:0 24px}
@@ -1073,6 +1073,19 @@ document.getElementById('sendEmail').addEventListener('click', function() {
 
   window.addEventListener('resize', function() { goTo(current); });
   resetTimer();
+})();
+
+// Block iOS pull-to-refresh white flash
+(function() {
+  var startY = 0;
+  document.addEventListener('touchstart', function(e) {
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchmove', function(e) {
+    if (window.scrollY === 0 && e.touches[0].clientY > startY) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 })();
 </script>
 </body>
