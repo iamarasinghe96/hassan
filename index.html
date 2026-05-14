@@ -105,7 +105,9 @@ a{text-decoration:none;color:inherit}
 
 /* WORK SLIDESHOW */
 .work-section{background:var(--white)}
-.work-slideshow-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--navy-mid);aspect-ratio:16/9;max-height:520px}
+.work-section .section-label,.work-section .section-title,.work-section .section-sub{text-align:center}
+.work-section .section-sub{margin-left:auto;margin-right:auto}
+.work-slideshow-wrap{position:relative;border-radius:24px;overflow:hidden;background:var(--navy-mid);aspect-ratio:1/1;max-width:640px;width:100%;margin:0 auto}
 .work-slides-track{display:flex;height:100%;transition:transform 0.5s ease;will-change:transform}
 .work-slide{min-width:100%;height:100%;flex-shrink:0;background-size:cover;background-position:center;background-color:var(--navy-mid)}
 .slide-nav{position:absolute;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;width:100%;padding:0 16px;pointer-events:none;z-index:2}
